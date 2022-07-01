@@ -1,0 +1,167 @@
+:root {
+    --main-font-color: hsl(60deg 1% 23%);
+    --sec-font-color:hsl(214deg 5% 72%);
+    --btn: hsl(217deg 66% 61%);
+    --check: hsl(115deg 50% 61%);
+    --bg-box: hsl(0deg 0% 100%);
+    --line: #dedede;
+    --dot-first: hsl(0deg 0% 67%);
+    --dot:hsl(0deg 0% 90%);
+    --card-focus: #f0eef0;
+}
+
+* {
+    margin: 0;
+    padding: 0;    
+}
+
+body, html {
+    box-sizing: border-box;
+}
+
+html {
+    background-image: url(./img/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-box);
+    margin: 10em auto;
+    width: 380px;
+    height: 410px;
+    border-radius: 5px;
+}
+
+.container .title {
+    flex: 1 0px;
+}
+
+.container .cards {
+    flex: 3 0px;
+}
+
+.container .btn {
+    flex: 1 0px;
+}
+
+.title {
+    margin-top: 1em;
+    margin-bottom: 1.25em;
+}
+
+.title h1 {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin-top: .5em;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    margin: 1em 0 1.25em 0;
+}
+
+.dots :first-child {
+    background-color:var(--dot-first);
+}
+
+.dot {
+    height: .6em;
+    width: .6em;
+    background-color:var(--dot);
+    border-radius: 50%;
+    margin: 0 .5em;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 16px;
+}
+
+.cards>* {
+    flex: 1 0px;
+}
+
+.cards :nth-child(odd) {
+    color: var(--sec-font-color);
+}
+
+
+.card {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--line);
+    background-color: var(--bg-box);
+}
+
+.card-active {
+    background-color: var(--card-focus);
+}
+
+.card p {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1em;
+    margin-left: 2em;
+}
+
+.card-img {
+    height: 1.75em;
+    width: auto;
+    margin-left: 2em;
+}
+
+#check {
+    margin-left: 7em;
+}
+
+.btn {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    background-color: var(--btn);
+    border-radius: 0 0 5px 5px;
+    display: block;
+    line-height: 72px;
+    height: 72px;
+    transition: background 0.15s ease-in-out;
+}
+
+.btn-active {
+    background-color: #558EF3;
+    top: 1px;
+
+}
+
+.btn p {
+    text-transform: uppercase;
+    color: var(--bg-box);
+    line-height: normal;
+    letter-spacing: 1px;
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+.arrow {
+    height:  25px;
+    margin-left: .75em;
+    display: inline-block;
+    vertical-align: middle;
+}

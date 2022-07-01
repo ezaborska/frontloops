@@ -1,0 +1,196 @@
+:root {
+    --bg-color-top: #cddce7;
+    --bg-color-bottom: #8aa9c3;
+    --dark-blue:#6a96d8;
+    --blue:#e6edf6;
+    --grey:#e3e4e4;
+    --red: #ffc2c1;
+    --black: #282124;
+    --white: #ffffff;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button, input {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-image: linear-gradient(var(--bg-color-top), var(--bg-color-bottom));
+    font-size: 16px;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 5em auto 0 auto;
+    width: 400px;
+    height: 500px;
+    background-color: var(--white);
+}
+
+.container .top, .container .bottom  {
+    flex: 1 1 0;
+}
+
+.container .messages-box {
+    flex: 7 1 0;
+}
+
+.container .bottom, .container .messages-box {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.top {
+    display: flex;
+    background-color: var(--dark-blue);
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.dot {
+    height: .5em;
+    width: .5em;
+    background-color: var(--white);
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 1em;    
+}
+
+.top img {
+    width: 20px;
+    height: 20px;
+    margin-right: 1em;
+    cursor: pointer;
+}
+
+.top img:hover {
+    opacity: 0.5;
+}
+
+.name {
+    text-transform: uppercase;
+    color: var(--white);
+    font-weight: 700;
+    margin-left: -7em;
+}
+
+.messages-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.messages-box >* {
+    flex: 1 1 0;
+}
+
+.message-title {
+    margin-top: 1em;
+    margin-bottom: -2em;
+}
+
+.header-center {
+    font-size: 1em;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-column-gap: .5em;
+    align-items: center;
+    color: var(--grey);
+}
+
+.header-center:before,
+.header-center:after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: currentColor;
+}
+
+.date {
+    color: var(--grey);
+    margin-bottom: 1em;
+}
+
+.bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--grey);
+}
+
+.btn {
+    text-transform: uppercase;
+    color: var(--dark-blue);
+    margin-right: 0;
+    font-weight: 500;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+    font-size: .85em;
+    font-weight: 400;
+}
+
+.text {
+    width: 75%;
+    line-height: 1.5em;
+}
+
+.text  p {
+    background-color: var(--blue);
+    overflow-wrap: anywhere;
+    hyphens: auto;
+    padding: .5em;
+    border-radius: 5px;
+}
+
+.text-com {
+    width: 60%;
+    line-height: 1.5em;
+    align-self: flex-end;    
+}
+
+.text-com p {
+    background-color: var(--red);
+    overflow-wrap: anywhere;
+    hyphens: auto;
+    padding: .5em;
+    border-radius: 5px;
+}
+
+.messages-box :nth-child(3) .text p {
+    background-color: var(--grey);
+}
+
+.messages-box :nth-child(3) .text {
+    align-self: flex-end;
+}
+
+.messages-box :nth-child(4) .text {
+    width: 25%;
+} 
+
+.messages-box :nth-child(3) .date {
+    align-self: flex-end;
+}

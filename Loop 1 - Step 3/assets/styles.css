@@ -1,0 +1,113 @@
+:root {
+    --bg-green: #33957a;
+    --main-text: hsl(30deg 12% 10%);
+    --sup-title: hsl(216deg 4% 73%);
+    --point: hsl(60deg 1% 47%);
+    --bg-white: hsl(0deg 0% 100%);
+    --shadow: #f1eff1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: var(--bg-green);
+    background-repeat: no-repeat;
+    background-size: cover;       
+}
+
+body {
+    box-sizing: border-box;
+    font-family:"Roboto", sans-serif;
+    min-width: 100%;
+    color: var(--main-text);
+}
+
+.container {
+    display: flex;
+    margin: 10rem auto 0 auto;
+    background-color: var(--bg-white);
+    width: 620px;
+    height: 480px;
+    border-radius: 5px;
+}   
+
+.box {
+    background-image: url("./img/bicycle.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right bottom -10em;
+    width: 100%;
+    box-shadow:   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin: 3em 3.5em 0 3.5em;
+    line-height: 2.5em;
+}
+
+.box-account {
+    display: flex;
+    flex-direction: column;
+}
+
+.account-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.account-items h1 {
+    font-size: 1.5em;    
+    font-weight: 700;    
+}
+
+.account-items img {
+    border: 1px solid var(--sup-title);
+    border-radius: 50%;
+    padding: .5em;
+}
+
+.account-items img:hover {
+    box-shadow: 0 0 1px 5px var(--shadow);
+    border: 1px solid #dad8da;
+    cursor: pointer;
+}
+
+.account-order { 
+    color: var(--sup-title);
+    font-size: .95em;
+    font-weight: 500;
+    line-height: 1.25em;
+    margin: 1.5em 0;
+}
+
+.orders {
+    display: flex;
+    flex-direction: column;    
+    font-size: 1.15em;
+    line-height: 2.8em;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.orders :last-child .order-description{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.order-price {
+    font-weight: 700;
+}

@@ -1,0 +1,291 @@
+:root {
+    --white: #ffffff;
+    --black: #333333;
+    --dark-gray: #999999;
+    --gray: #c8c9c9;
+    --red: #ea625c;
+    --dark-red: #d44c46;
+    --mg-left-right: 18em;
+    --mg-bottom-top: 2.5em;
+    --pad: .5em;
+    --pad-buttom-bottom-top: .75em;
+    --pad-buttom-left-right: 1.5em;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+a, a:hover, a:focus, a:active, a:hover {
+    text-decoration: none;
+    color: inherit;
+    
+}
+
+hr {
+    border: none;
+}
+
+input {
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: var(--gray);
+    font-weight: 700;
+}
+
+
+input:focus {
+    border-color: var(--black);
+}
+
+html {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+}
+
+button {
+    margin-top: var(--mg-bottom-top);
+    padding: var(--pad-buttom-bottom-top) var(--pad-buttom-left-right);
+    color:var(--white);
+    background-color: var(--red);
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: var(--dark-red);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.box {
+    display: flex;
+    margin-top: var(--mg-bottom-top);
+    margin-bottom: var(--mg-bottom-top);
+}
+
+.top-box {
+    flex-direction: column; 
+    border-bottom: 2px solid var(--gray);
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-left: var(--mg-left-right);
+}
+
+.content-info {
+    width: 35%;
+}
+
+.content h1 {
+    padding-bottom: var(--pad);
+}
+
+.title {
+    font-weight: 700;
+    font-size: 3em;
+}
+
+.text {
+    border-left: 3px solid var(--gray);
+    
+}
+
+.content .text p {
+    color: var(--gray);
+    line-height: 1.5em;
+    padding-left: var(--pad);
+}
+
+.main-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: var(--mg-left-right);
+    margin-right: var(--mg-left-right);
+    margin-bottom: var(--mg-bottom-top);
+}
+
+.menu {
+    display: flex;
+    color: var(--gray);
+    font-weight: 500;
+    gap: 2em;
+}
+
+.menu a:focus, a:active, a:hover {
+    color: var(--black);
+    border-bottom: 1px solid var(--dark-gray);
+}
+
+.img-watches {
+    object-position: 20em;
+    width: 40em;
+    height: 38em;
+}
+
+.top-box .content-info {
+    align-self: center;
+}
+
+.middle-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.middle-box .content {
+   margin-left: var(--mg-left-right);
+   margin-right: var(--mg-left-right);
+}
+
+ .content-info {
+    align-self: center;
+}
+
+.items {
+    display: flex;
+    margin-left: var(--mg-left-right);
+    margin-right: var(--mg-left-right);
+    margin-bottom: 5em;
+    gap: 5em;
+}
+
+.item {
+    flex: 1 1 0px;
+}
+
+.item h4 {
+    padding-bottom: 3em;
+}
+
+.item p {
+    line-height: 1.75em;
+    font-weight: 500;
+}
+
+.img-preview {
+    width: 25em;
+    height: 35em;
+}
+
+.dots {
+    margin-top: 1em;
+    width: 70px;
+}
+  
+.dots > div {
+    width: .3em;
+    height: .3em;
+    background-color: var(--gray);
+    display: inline-block;
+}
+
+.line-btn {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    color: var(--red);
+}
+
+.line-btn hr {
+    width: 3em;
+    background: var(--red);
+    height: .25em;
+}
+
+.line-btn:hover hr {
+    width: 4em;
+}
+
+.line-btn p {
+    font-weight: 700;
+}
+
+.container .box:last-child {
+    margin-bottom: 0;
+}
+
+.bottom-box {
+    background-image: url(../img/runners.jpg);
+    max-width: 2000px;
+    height: 750px;
+    background-size: cover;
+    overflow: hidden;
+    background-position: bottom;
+}
+
+.bottom-box .content {
+    color: var(--white);
+    justify-content: flex-end;
+    margin-right: var(--mg-left-right);
+}
+
+@media screen and (max-width: 1300px) {
+    :root {
+        --mg-left-right: 13em;
+    }
+
+    .title {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    :root {
+        --mg-left-right: 5em;
+    }
+
+    html {
+        font-size: 10px;
+    }
+
+    input::placeholder {
+        font-size: .9em;
+    }
+
+    .img-watches {
+        object-position: 15em;
+    } 
+
+    .img-preview {
+        width: 20em;
+        height: 35em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .img-watches {
+        object-position: 10em;
+        width: 30em;
+        height: 25em;
+    }
+    
+    .bottom-box {
+        height: 500px;
+    }
+}

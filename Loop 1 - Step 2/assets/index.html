@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Loop 1 - Step 2</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="title">
+      <div class="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <h1>payment method</h1>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <img class="card-img" src="./img/visa.svg" alt="visa card">
+        <p>visa</p>
+      </div>
+      <div class="card" tabindex="0">
+        <img class="card-img" src="./img/mastercard.svg" alt="mastercard card">
+        <p>mastercard</p>
+        <img class="card-img" id="check" src="./img/check.svg" alt="check">
+      </div>
+      <div class="card">
+        <img class="card-img" src="./img/maestro.svg" alt="maestro card">
+        <p>maestro</p>     
+      </div>
+    </div>
+    <div class="btn">
+      <p>next step</p>
+      <img class="arrow" src="./img/arrow.svg" alt="arrow"></img>
+    </div>
+  </div>
+
+  <script>
+    const cardItems = document.getElementsByClassName("card");
+
+    Array.from(cardItems).forEach(element => {
+      element.addEventListener('click', function() {
+        if(this.classList.contains('card-active')) {
+          this.classList.remove("card-active");
+          this.classList.add('card')
+        } else {
+          this.classList.add('card-active')
+        }
+      })
+    });
+
+    const btn = document.getElementsByClassName('btn');
+
+    Array.from(btn).forEach(element => {
+      element.addEventListener('click', function() {
+        if(this.classList.contains('btn-active')) {
+          this.classList.remove("btn-active");
+          this.classList.add('btn')
+        } else {
+          this.classList.add('btn-active')
+        }
+      })
+    });
+  </script>
+</body>
+</html>
